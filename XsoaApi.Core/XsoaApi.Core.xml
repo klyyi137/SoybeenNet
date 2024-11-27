@@ -1,0 +1,3469 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XsoaApi.Core</name>
+    </assembly>
+    <members>
+        <member name="T:XsoaApi.Core.SqlSugarRepository`1">
+            <summary>
+            SqlSugar 仓储实现类
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="F:XsoaApi.Core.SqlSugarRepository`1._db">
+            <summary>
+            初始化 SqlSugar 客户端
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.SqlSugarRepository`1.Context">
+            <summary>
+            数据库上下文
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.SqlSugarRepository`1.EntityContext">
+            <summary>
+            独立数据库上下文
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.SqlSugarRepository`1.Entities">
+            <summary>
+            实体集合
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.SqlSugarRepository`1.Ado">
+            <summary>
+            原生 Ado 对象
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.#ctor(SqlSugar.ISqlSugarClient)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取总数
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.CountAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取总数
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            检查是否存在
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AnyAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            检查是否存在
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Single(System.Object)">
+            <summary>
+            通过主键获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.SingleAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.SingleAsync(System.Object)">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.FirstOrDefault(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.FirstOrDefaultAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取一个实体
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.ToList">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.ToList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.ToList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},SqlSugar.OrderByType)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <param name="orderByExpression"></param>
+            <param name="orderByType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.ToListAsync">
+            <summary>
+            获取列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.ToListAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.ToListAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,System.Object}},SqlSugar.OrderByType)">
+            <summary>
+            获取列表
+            </summary>
+            <param name="whereExpression"></param>
+            <param name="orderByExpression"></param>
+            <param name="orderByType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Insert(`0)">
+            <summary>
+            新增一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Insert(`0[])">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Insert(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertReturnIdentity(`0)">
+            <summary>
+            新增一条记录返回自增Id
+            </summary>
+            <param name="insertObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertReturnSnowflakeId(`0)">
+            <summary>
+            新增一条记录返回雪花Id
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertReturnEntity(`0)">
+            <summary>
+            新增一条记录返回实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertAsync(`0)">
+            <summary>
+            新增一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertAsync(`0[])">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            新增多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertReturnIdentityAsync(`0)">
+            <summary>
+            新增一条记录返回自增Id
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertReturnSnowflakeIdAsync(`0)">
+            <summary>
+            新增一条记录返回雪花Id
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.InsertReturnEntityAsync(`0)">
+            <summary>
+            新增一条记录返回实体
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Update(`0)">
+            <summary>
+            更新一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Update(`0[])">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Update(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.UpdateAsync(`0)">
+            <summary>
+            更新一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Update(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,`0}})">
+            <summary>
+            更新记录
+            </summary>
+            <param name="predicate">更新的条件</param>
+            <param name="content">更新的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.UpdateAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{`0,`0}})">
+            <summary>
+            更新记录
+            </summary>
+            <param name="predicate">更新的条件</param>
+            <param name="content">更新的内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.UpdateAsync(`0[])">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.UpdateAsync(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            更新多条记录
+            </summary>
+            <param name="entities"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Delete(`0)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Delete(System.Object)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Delete(System.Object[])">
+            <summary>
+            删除多条记录
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            自定义条件删除记录
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.DeleteAsync(`0)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.DeleteAsync(System.Object)">
+            <summary>
+            删除一条记录
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.DeleteAsync(System.Object[])">
+            <summary>
+            删除多条记录
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.DeleteAsync(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            自定义条件删除记录
+            </summary>
+            <param name="whereExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式查询多条记录
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Where(System.Boolean,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            根据表达式查询多条记录
+            </summary>
+            <param name="condition"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AsQueryable">
+            <summary>
+            构建查询分析器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AsQueryable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            构建查询分析器
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AsEnumerable">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AsEnumerable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AsAsyncEnumerable">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.AsAsyncEnumerable(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            直接返回数据库结果
+            </summary>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.Change``1">
+            <summary>
+            切换仓储(注意使用环境)
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <returns>仓储</returns>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.CurrentBeginTran">
+            <summary>
+            当前db
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.CurrentCommitTran">
+            <summary>
+            当前db
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.CurrentRollbackTran">
+            <summary>
+            当前db
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.BeginTran">
+            <summary>
+            所有db
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.CommitTran">
+            <summary>
+            所有db
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.SqlSugarRepository`1.RollbackTran">
+            <summary>
+            所有db
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.CacheConst">
+            <summary>
+            缓存相关常量
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyUser">
+            <summary>
+            用户缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyUserMenu">
+            <summary>
+            用户菜单缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyUserButton">
+            <summary>
+            用户权限缓存（按钮集合）
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyUserOrg">
+            <summary>
+            用户机构缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyRoleMaxDataScope">
+            <summary>
+            角色最大数据范围缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyUserOnline">
+            <summary>
+            在线用户缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyVerCode">
+            <summary>
+            图形验证码缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyTenant">
+            <summary>
+            租户缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyConst">
+            <summary>
+            常量下拉框
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyAll">
+            <summary>
+            所有缓存关键字集合
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.SqlSugar">
+            <summary>
+            SqlSugar二级缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyOpenAccess">
+            <summary>
+            开放接口身份缓存
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.CacheConst.KeyOpenAccessNonce">
+            <summary>
+            开放接口身份随机数缓存
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.ClaimConst">
+            <summary>
+            Claim相关常量
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.Name">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.UserRolesId">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.AccountType">
+            <summary>
+            账号类型
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.OrgId">
+            <summary>
+            组织机构Id
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.OrgName">
+            <summary>
+            组织机构名称
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.OrgType">
+            <summary>
+            组织机构类型
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.ClaimConst.OpenId">
+            <summary>
+            微信OpenId
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.SqlSugarConst">
+            <summary>
+            SqlSugar相关常量
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.SqlSugarConst.MainConfigId">
+            <summary>
+            默认数据库标识（默认租户）
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.SqlSugarConst.LogConfigId">
+            <summary>
+            日志数据库标识
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.SqlSugarConst.PrimaryKey">
+            <summary>
+            默认表主键
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.DbContext">
+            <summary>
+            数据库上下文对象
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.DbContext.Instance">
+            <summary>
+            SqlSugar 数据库实例
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.AccountTypeEnum">
+            <summary>
+            账号类型枚举
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.AccountTypeEnum.SuperAdmin">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.AccountTypeEnum.SysAdmin">
+            <summary>
+            系统管理员
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.AccountTypeEnum.NormalUser">
+            <summary>
+            部门负责人
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.AccountTypeEnum.Member">
+            <summary>
+            职员
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.LoginModeEnum">
+            <summary>
+            登录模式枚举
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.LoginModeEnum.PC">
+            <summary>
+            PC模式
+            </summary>
+        </member>
+        <member name="F:XsoaApi.Core.LoginModeEnum.APP">
+            <summary>
+            APP
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Constant">
+            <summary>
+            系统存放所有常量的地方
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.ModelBase">
+            <summary>
+            实体的基类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysCreateUser">
+            <summary>
+            系统字段-创建人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysCreateTime">
+            <summary>
+            系统字段-创建时间
+            默认值:CURRENT_TIMESTAMP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysUpdateUser">
+            <summary>
+            系统字段-修改人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysUpdateTime">
+            <summary>
+            系统字段-修改时间
+            默认值:CURRENT_TIMESTAMP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysDeleteUser">
+            <summary>
+            系统字段-删除人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysDeleteTime">
+            <summary>
+            系统字段-删除时间
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.ModelBase.SysIsDelete">
+            <summary>
+            系统字段-删除标记
+            默认值:0
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.Order">
+            <summary>
+            销售单视图
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Djbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Rq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Dwmch">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Hsje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Ywy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Issc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.Order.Djbs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.OrderDetails">
+             <summary>
+             销售单明细视图
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Djbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.DjSn">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.DjSort">
+            <summary>
+            备  注:
+            默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Spbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Spmch">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Shpgg">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Shpchd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Dw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Shl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Hshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Hsje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.OrderDetails.Abcfl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SkMchk">
+             <summary>
+             
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Dwbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Danwbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Dwmch">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Zjm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Kehufl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Kehulb">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Kehudengji">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Beactive">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Hkqx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.DwXz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Province">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.City">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.County">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Street">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Createtime">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMchk.Kdy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SkMxysyf">
+             <summary>
+             
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Djbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.DjSn">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Spid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Rq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Dwbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.DjSort">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Jieqing">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Hw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Yisfje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Shl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Dj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Je">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Shlv">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Hshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Hsje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.She">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Ml">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Lshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Lshje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Recnum">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Xgdjbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Yishj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.UseYsyf">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Ysyfje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.Lxrid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.YwyId">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkMxysyf.JieqingE">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SkSpkfk">
+             <summary>
+             
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Sptm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spmch">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zjm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Beactive">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yishj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsJzok">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsGdsj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsGdzk">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsTjsp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsHysp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsGmp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsGsp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsSy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsYp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jingd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Denglrq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Gengxshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Delrq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chbjs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Dw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shpchd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shpgg">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Kemuhao">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Oldcode">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Rkhw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Ckhw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Dwbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Bzqfs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Fenlbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Guojbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Changjbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Huaxm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Changym">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Suming">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Xiwname">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Tongym">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shengccj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Pizhwh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zhucsb">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jixing">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shiyzh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Bulfy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chuczysx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chuffl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yaofpd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yongfyyl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jinjzh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zhuysx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yaowchf">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Youxq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shangplx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Guizbz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yongyfl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Leibie">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Kuansbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Xslb">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Colorbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chimbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Classkey">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Beizhu">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jlgg">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Otd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Ordercycle">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Stkquot">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shlv">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Hshjj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Hshsj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Lshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Koul">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Kcsx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Kcxx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Helkc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Bzqts">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yujts">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zgshl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zhdcbj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zdshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zgshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zgjjxz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Maolv">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Huiytj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Itemlength">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Itemheight">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Itemwidth">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Weight">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Casevolume">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Caseweight">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zuixdwtj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zuixdwzl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Pfpj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Dispcolor">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Bzgg">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Lastmodifytime">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsCmd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Lsgg">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsZdyh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsJkyp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Minshl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.CxDjKl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsCxDj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zdyh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zdhyzklshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsCyhydz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Huiyshl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Nocalcopys">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Fuzr">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Glid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsJsh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsLc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsZhongyao">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.TypeBh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zdlshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Guanjzjh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shiyq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.AbbrImageUrl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Cbflbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ImageUrl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsYbsp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.YbZfbl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.YbSpbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Username">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chuchj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Pifj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zhilbz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chargelb">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsSendybzx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.TjYlshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Caigy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Guanlilb">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Cgsx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Tfjj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Tfshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jwh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zbz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Xsbz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsXspfj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsJifen">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsSm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Cunchtj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zxtsdy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Beihuolx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Isjh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Isxs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsBind">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Abcfl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Cunfhw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpOtcclass">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpYyclass">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Gudshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Dabh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shpzht">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jxspzbs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.YysybAbc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsDypfj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jsyp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.JdKcsx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.JdKcxx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Lhxs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DyGuanlilb">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.FlHsdj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Klfl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsGzwp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Sptm2">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpSwclass">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DzjgFirstBz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DzjgSecondBz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DzjgThirdBz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DzjgFourthBz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DzjgFifthBz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zhbj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zhongbj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpSwclass2">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Qhlx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Qhxs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsJy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsHytjsp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpBs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsHuiysp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.CxSpfl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsXianxsp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Minbz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsCl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ClJlgg">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ClDj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ClDw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsXy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsSx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.MxbHyj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ClXs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ClSpid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.OldSpid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spgx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spdw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsCxdz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SxStartRq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Psdw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ClLshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.MdZdsj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Pfabc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spdw2">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jiagd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Jifen">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Guopj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Wsyj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Yiyuanj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.CwShlv">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.LsDp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shltc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.TcBl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.DpZdshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Gxrq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.ShlTcbl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Wdid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.WpZdshj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpFenlei">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsSypz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsZgsp">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsQdxs">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Mdxxshl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Zzgn">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.CwLeibie">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsXxpz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpSx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.YwyCjl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Shcpfj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsCx">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.YwyTc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.YwyDj">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Xsbl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Teti">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.SpGsbm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Gnzz">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Ssxkcyr">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Spmzjm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Goodsowner">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Ownergoodsid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Drxl">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Mprice">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsGw">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Kxqd">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.IsXk">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkSpkfk.Chandi">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SkYwjsmxk">
+             <summary>
+             
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Djbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Ydjbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Rq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Dwbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Spid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Bm">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Ywy">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Beizhu">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Yisfje">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Ml">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.DjSort">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.DjSn">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Recnum">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Chonghdjbh">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Istk">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.Lxrid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.GsRq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.HkRq">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.TcYwyid">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.TcYwymc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SkYwjsmxk.IsSc">
+             <summary>
+             备  注:
+             默认值:
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysLoginLog">
+            <summary>
+            t_sys_login_log:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.IpInfo">
+            <summary>
+            IP的具体信息(归属地等)
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.UaStr">
+            <summary>
+            UA
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.Browser">
+            <summary>
+            浏览器
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.Os">
+            <summary>
+            系统
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLoginLog.Device">
+            <summary>
+            设备
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysLogVis">
+             <summary>
+            操作日志表
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Id">
+             <summary>
+            主键Id
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Name">
+             <summary>
+            名称
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Success">
+             <summary>
+            是否执行成功（Y-是，N-否）
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Message">
+             <summary>
+            具体消息
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Location">
+             <summary>
+            地址
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Browser">
+             <summary>
+            浏览器
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Os">
+             <summary>
+            操作系统
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Url">
+             <summary>
+            请求地址
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.ClassName">
+             <summary>
+            类名称
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.MethodName">
+             <summary>
+            方法名称
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.ReqMethod">
+            <summary>
+            请求方式 GET POST PUT DELETE
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Param">
+             <summary>
+            请求参数
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Result">
+             <summary>
+            返回结果
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.ElapsedTime">
+             <summary>
+            耗时（毫秒）
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.OpTime">
+             <summary>
+            操作时间
+             </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysLogVis.Account">
+             <summary>
+            操作人
+             </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysMenu">
+            <summary>
+            t_sys_menu:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.MenuType">
+            <summary>
+            Desc:菜单类型1 .目录 2.菜单
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.MenuName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.RouteName">
+            <summary>
+            Desc:路由名称
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.RoutePath">
+            <summary>
+            Desc:路由路径
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Component">
+            <summary>
+            Desc:页面组件
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.I18nKey">
+            <summary>
+            国际化key
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Icon">
+            <summary>
+            Desc:图标
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.IconType">
+            <summary>
+            图标类型
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.ParentId">
+            <summary>
+            Desc:父级菜单ID
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Status">
+            <summary>
+            Desc:菜单状态
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.KeepAlive">
+            <summary>
+            缓存路由
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Constant">
+            <summary>
+            常量路由
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Order">
+            <summary>
+            Desc:排序
+            Default:0
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Href">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.HideInMenu">
+            <summary>
+            Desc:隐藏菜单
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.ActiveMenu">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.MultiTab">
+            <summary>
+            支持多页签
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.FixedIndexInTab">
+            <summary>
+            固定在页签中的序号
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Query">
+            <summary>
+            路由参数
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Buttons">
+            <summary>
+            按钮
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysMenu.Children">
+            <summary>
+            子菜单
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.ConnectionId">
+            <summary>
+            连接Id
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.UserName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.Time">
+            <summary>
+            连接时间
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.Ip">
+            <summary>
+            连接IP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.Browser">
+            <summary>
+            浏览器
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOnlineUser.Os">
+            <summary>
+            操作系统
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysOrg">
+            <summary>
+            t_sys_menu:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysOrg.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysRole">
+            <summary>
+            t_sys_role:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.RoleDesc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.Status">
+            <summary>
+            是否启用
+            默认值:1
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.DataRang">
+            <summary>
+            数据范围(字典数据DataRang)
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.Permission">
+            <summary>
+            数据权限(当范围为自定义时选择的部门)
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysCreateUser">
+            <summary>
+            系统字段-创建人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysCreateTime">
+            <summary>
+            系统字段-创建时间
+            默认值:CURRENT_TIMESTAMP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysUpdateUser">
+            <summary>
+            系统字段-修改人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysUpdateTime">
+            <summary>
+            系统字段-修改时间
+            默认值:CURRENT_TIMESTAMP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysDeleteUser">
+            <summary>
+            系统字段-删除人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysDeleteTime">
+            <summary>
+            系统字段-删除时间
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRole.SysIsDelete">
+            <summary>
+            系统字段-删除标记
+            默认值:0
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysRoleMenu">
+            <summary>
+            角色菜单表
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRoleMenu.RoleId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRoleMenu.MenuId">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysUser">
+            <summary>
+            t_sys_user:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Account">
+            <summary>
+            登录账号
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.UserRolesId">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Status">
+            <summary>
+            状态(10正常，00冻结)
+            默认值:10
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Tel">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.OrgId">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUser.AccountType">
+            <summary>
+            账号类型
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysRolePermission">
+            <summary>
+            t_sys_user_button_permiss:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRolePermission.RoleId">
+            <summary>
+            Desc:角色id
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysRolePermission.UserPermiss">
+            <summary>
+            Desc:用户访问接口的权限
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysUserRole">
+            <summary>
+            用户角色表
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUserRole.UserId">
+            <summary>
+            用户id
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysUserRole.RoleId">
+            <summary>
+            角色id
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.Models.SysWebApiLog">
+            <summary>
+            t_sys_webapi_log:数据库映射类
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysCreateUser">
+            <summary>
+            系统字段-创建人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysCreateTime">
+            <summary>
+            系统字段-创建时间
+            默认值:CURRENT_TIMESTAMP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysUpdateUser">
+            <summary>
+            系统字段-修改人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysUpdateTime">
+            <summary>
+            系统字段-修改时间
+            默认值:CURRENT_TIMESTAMP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysDeleteUser">
+            <summary>
+            系统字段-删除人
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysDeleteTime">
+            <summary>
+            系统字段-删除时间
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.SysIsDelete">
+            <summary>
+            系统字段-删除标记
+            默认值:0
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.DeptId">
+            <summary>
+            部门ID
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.Path">
+            <summary>
+            路由
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.Input">
+            <summary>
+            传入参数
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.InTime">
+            <summary>
+            传入时间
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.Output">
+            <summary>
+            传出参数
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.Models.SysWebApiLog.OutTime">
+            <summary>
+            传出时间
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.TokenData.ExpireTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Core.AuthAppService">
+            <summary>
+            用户登录服务接口
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.AuthAppService.#ctor(XsoaApi.Core.SqlSugarRepository{XsoaApi.Core.Models.SysUser},XsoaApi.Core.UserManager,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            用户登录服务接口
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.AuthAppService.GetUserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.AuthAppService.CreateToken(XsoaApi.Core.Models.SysUser)">
+            <summary>
+            生成Token令牌 🔖
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XsoaApi.Core.AuthUserLoginIn.UserName">
+            <summary>
+            登录账号
+            </summary>
+            <example>admin</example>
+        </member>
+        <member name="P:XsoaApi.Core.AuthUserLoginIn.PassWord">
+            <summary>
+            密码
+            </summary>
+            <example>123456</example>
+        </member>
+        <member name="T:XsoaApi.Core.RouteService">
+            <summary>
+            动态路由
+            </summary>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:XsoaApi.Core.RouteService.#ctor(XsoaApi.Core.UserManager)">
+            <summary>
+            动态路由
+            </summary>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:XsoaApi.Core.RouteService.GetConstantRoutes">
+            <summary>
+            获取固定的路由数据(不需要权限)
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.RouteService.GetUserRoutes">
+            <summary>
+            获取用户路由数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Core.RouteService.IsRouteExist">
+            <summary>
+            路由是否存在
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XsoaApi.Core.UserManager">
+            <summary>
+            当前登录用户
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Core.UserManager.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            当前登录用户
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.Account">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.Name">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.SuperAdmin">
+            <summary>
+            是否超级管理员
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.SysAdmin">
+            <summary>
+            是否系统管理员
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.OrgId">
+            <summary>
+            组织机构Id
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Core.UserManager.OpenId">
+            <summary>
+            微信OpenId
+            </summary>
+        </member>
+        <member name="T:PageInputBase">
+            <summary>
+            通用分页输入参数
+            </summary>
+        </member>
+        <member name="P:PageInputBase.Keyword">
+            <summary>
+            搜索值
+            </summary>
+        </member>
+        <member name="P:PageInputBase.Page">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:PageInputBase.PageSize">
+            <summary>
+            页码容量
+            </summary>
+        </member>
+        <member name="P:PageInputBase.SearchBeginTime">
+            <summary>
+            搜索开始时间
+            </summary>
+        </member>
+        <member name="P:PageInputBase.SearchEndTime">
+            <summary>
+            搜索结束时间
+            </summary>
+        </member>
+        <member name="P:PageInputBase.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:PageInputBase.SortOrder">
+            <summary>
+            排序方法,默认升序,否则降序(配合antd前端,约定参数为 Ascend,Dscend)
+            </summary>
+        </member>
+        <member name="P:PageInputBase.DescStr">
+            <summary>
+            降序排序(不要问我为什么是descend不是desc，前端约定参数就是这样)
+            </summary>
+        </member>
+    </members>
+</doc>

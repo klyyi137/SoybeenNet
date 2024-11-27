@@ -1,0 +1,5 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Kevin\.nuget\packages\furion.pure\4.9.5.12\lib\net8.0\Furion.Pure.dll" /&gt;&#xD;
+  &lt;Assembly Path="C:\Users\Kevin\.nuget\packages\furion.extras.authentication.jwtbearer\4.9.5.12\lib\net8.0\Furion.Extras.Authentication.JwtBearer.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>

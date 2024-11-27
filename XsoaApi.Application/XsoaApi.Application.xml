@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XsoaApi.Application</name>
+    </assembly>
+    <members>
+        <member name="P:XsoaApi.Application.Sales.Dto.SalesIn.Current">
+            <summary>
+            
+            </summary>
+            <example>1</example>
+        </member>
+        <member name="P:XsoaApi.Application.Sales.Dto.SalesIn.Size">
+            <summary>
+            
+            </summary>
+            <example>10</example>
+        </member>
+        <member name="P:XsoaApi.Application.Sales.Dto.SalesIn.Month">
+            <summary>
+            
+            </summary>
+            <example>2024-10</example>
+        </member>
+        <member name="M:XsoaApi.Application.SalesService.GetSalesAmount(XsoaApi.Application.Sales.Dto.SalesIn)">
+            <summary>
+            销售查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SalesService.GetSalesAmountSummary(XsoaApi.Application.Sales.Dto.SalesIn)">
+            <summary>
+            销售汇总查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SalesService.GetUserList">
+            <summary>
+            取业务员列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Id">
+            <summary>
+            菜单id
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.MenuType">
+            <summary>
+            Desc:菜单类型1 .目录 2.菜单
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.MenuName">
+            <summary>
+            Desc:菜单名称
+            Default:
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.RouteName">
+            <summary>
+            Desc:路由名称
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.RoutePath">
+            <summary>
+            Desc:路由路径
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Component">
+            <summary>
+            Desc:页面组件
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.I18NKey">
+            <summary>
+            国际化key
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Icon">
+            <summary>
+            Desc:图标
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.IconType">
+            <summary>
+            Desc:图标类型
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.ParentId">
+            <summary>
+            Desc:父级菜单ID
+            Default:
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Status">
+            <summary>
+            Desc:菜单状态
+            Default:
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.KeepAlive">
+            <summary>
+            缓存路由
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Constant">
+            <summary>
+            常量路由
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Order">
+            <summary>
+            Desc:排序
+            Default:0
+            Nullable:True
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.Href">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.HideInMenu">
+            <summary>
+            Desc:隐藏菜单
+            Default:0
+            Nullable:False
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.ActiveMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.MultiTab">
+            <summary>
+            支持多页签
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.MenuAddandUpIn.FixedIndexInTab">
+            <summary>
+            固定在页签中的序号
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Application.SysMenuService">
+            <summary>
+            菜单管理服务接口
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.#ctor(XsoaApi.Core.SqlSugarRepository{XsoaApi.Core.Models.SysMenu})">
+            <summary>
+            菜单管理服务接口
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.GetMenuList">
+            <summary>
+            获取菜单列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.GetMenuList2">
+            <summary>
+            获取菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.Add(XsoaApi.Application.MenuAddandUpIn)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.Update(XsoaApi.Application.MenuAddandUpIn)">
+            <summary>
+            更新菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SysMenuService.GetAllPage">
+            <summary>
+            获取所有页面组件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XsoaApi.Application.RoleAddandUpIn.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleAddandUpIn.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleAddandUpIn.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleAddandUpIn.Status">
+            <summary>
+            是否启用
+            默认值:1
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleListIn.Current">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleListIn.Size">
+            <summary>
+            每页数
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleListOut.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleListOut.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Application.RoleListOut.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="T:XsoaApi.Application.SysRoleService">
+            <summary>
+            权限管理服务接口
+            </summary>
+            <param name="sysRoleRep"></param>
+        </member>
+        <member name="M:XsoaApi.Application.SysRoleService.#ctor(XsoaApi.Core.SqlSugarRepository{XsoaApi.Core.Models.SysRole})">
+            <summary>
+            权限管理服务接口
+            </summary>
+            <param name="sysRoleRep"></param>
+        </member>
+        <member name="M:XsoaApi.Application.SysRoleService.GetAllRoles">
+            <summary>
+            获取所有权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Application.SysRoleService.GetRoleList(XsoaApi.Application.RoleListIn)">
+            <summary>
+            取角色列表
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

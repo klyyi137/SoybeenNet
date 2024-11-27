@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<NoWarn>1701;1702;1591;8632</NoWarn>
+		<DocumentationFile>XsoaApi.Application.xml</DocumentationFile>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+
+
+	<ItemGroup>
+	  <Compile Remove="Model\**" />
+	  <Compile Remove="SystemManage\SysUser\**" />
+	  <EmbeddedResource Remove="Model\**" />
+	  <EmbeddedResource Remove="SystemManage\SysUser\**" />
+	  <None Remove="Model\**" />
+	  <None Remove="SystemManage\SysUser\**" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Remove="applicationsettings.json" />
+		<None Remove="XsoaApi.Application.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="applicationsettings.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\XsoaApi.Core\XsoaApi.Core.csproj" />
+	</ItemGroup>
+
+</Project>

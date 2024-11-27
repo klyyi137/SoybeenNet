@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XsoaApi.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="T:XsoaApi.Web.Core.ResTfulResultProvider">
+            <summary>
+            RESTful 风格返回值
+            </summary>
+        </member>
+        <member name="M:XsoaApi.Web.Core.ResTfulResultProvider.OnAuthorizeException(Microsoft.AspNetCore.Http.DefaultHttpContext,Furion.FriendlyException.ExceptionMetadata)">
+            <summary>
+            JWT 授权异常返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Web.Core.ResTfulResultProvider.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext,Furion.FriendlyException.ExceptionMetadata)">
+            <summary>
+            异常返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Web.Core.ResTfulResultProvider.OnSucceeded(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext,System.Object)">
+            <summary>
+            成功返回值
+            </summary>
+            <param name="context"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Web.Core.ResTfulResultProvider.OnValidateFailed(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Furion.DataValidation.ValidationMetadata)">
+            <summary>
+            验证失败/业务异常返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Web.Core.ResTfulResultProvider.OnResponseStatusCodes(Microsoft.AspNetCore.Http.HttpContext,System.Int32,Furion.UnifyResult.UnifyResultSettingsOptions)">
+            <summary>
+            特定状态码返回值
+            </summary>
+            <param name="context"></param>
+            <param name="statusCode"></param>
+            <param name="unifyResultSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XsoaApi.Web.Core.ResTfulResultProvider.ResTfulResult(System.Int32,System.String,System.Object,System.Object)">
+            <summary>
+            返回 RESTful 风格结果集
+            </summary>
+            <param name="code"></param>
+            <param name="msg"></param>
+            <param name="data"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="P:XsoaApi.Web.Core.CustomResTfulResult`1.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Web.Core.CustomResTfulResult`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Web.Core.CustomResTfulResult`1.Msg">
+            <summary>
+            执行成功
+            </summary>
+        </member>
+        <member name="P:XsoaApi.Web.Core.CustomResTfulResult`1.Errors">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+    </members>
+</doc>
